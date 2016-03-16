@@ -1,3 +1,3 @@
 # Design-patterns
 
-Hello, This Design Patterns use pascal.
+Hello, This Design Patterns use Delphi.
