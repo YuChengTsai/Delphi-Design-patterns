@@ -48,7 +48,7 @@ end;
 
 procedure TPerson.show;
 begin
-  writeln('裝扮的 ' + name);
+  writeln('裝扮的' + name);
 end;
 
 { TFinery }
@@ -60,8 +60,8 @@ end;
 
 procedure TFinery.show;
 begin
-  inherited;
-    component.show;
+if component <> nil then
+  component.show;
 end;
 
 { TTshirts }
