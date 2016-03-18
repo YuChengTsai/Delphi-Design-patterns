@@ -17,8 +17,9 @@ begin
   b.Assign(a);
   b.SetWorkExperience('1998-2006', 'YY公司');
 
-  c := a;
+  c.Assign(a);
   c.SetPersonalinfo('男', '24');
+  c.SetWorkExperience('1998-2003', 'ZZ公司');
 
   a.Display;
   b.Display;
