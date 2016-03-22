@@ -3,44 +3,33 @@ unit Unit1;
 interface
 
 uses
-  SysUtils;
+SysUtils;
 
 type
-TTestPaper = class
-public
-  procedure TestQuestion1;
-  procedure TestQuestion2;
-protected
-  function Answer1():string; virtual;
-  function Answer2():string; virtual;
-end;
+  TTestPaper = class
+  protected
+    function Answer1: string; Virtual; Abstract;
+    function Answer2: string; Virtual; Abstract;
+  published
+    procedure TestQuestion1;
+    procedure TestQuestion2;
+  end;
 
-TTestPaperA = class(TTestPaper)
-protected
-  function Answer1():string;
-  function Answer2():string;
-end;
+  TTestPaperA = class(TTestPaper)
+  protected
+    function Answer1:string; override;
+    function Answer2:string; override;
+  end;
 
-
-TTestPaperB = class(TTestPaper)
-protected
-  function Answer1():string;
-  function Answer2():string;
-end;
-
+  TTestPaperB = class(TTestPaper)
+  protected
+    function Answer1: string; override;
+    function Answer2: string; override;
+  end;
 
 implementation
 
 { TTestPaper }
-function TTestPaper.Answer1: string;
-begin
-
-end;
-
-function TTestPaper.Answer2: string;
-begin
-
-end;
 
 procedure TTestPaper.TestQuestion1;
 begin
@@ -64,12 +53,12 @@ end;
 
 { TTestPaperA }
 
-function TTestPaperA.Answer1(): string;
+function TTestPaperA.Answer1: string;
 begin
   Result := 'A'
 end;
 
-function TTestPaperA.Answer2(): string;
+function TTestPaperA.Answer2: string;
 begin
   Result := 'B'
 end;

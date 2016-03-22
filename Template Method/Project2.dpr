@@ -5,22 +5,22 @@ uses
   Unit1 in 'Unit1.pas';
 
 var
-  studentA, studentB: TTestPaper;
+  StudentA : TTestPaperA;
+  StudentB : TTestPaperB;
 begin
-  studentA := TTestPaper.Create;
-  studentB := TTestPaper.Create;
+  StudentA := TTestPaperA.Create;
+  StudentB := TTestPaperB.Create;
 
-  writeln('StudentA的試卷');
-  studentA.TestQuestion1(Answer1);
-  studentA.TestQuestion2(Answer2);
-  studentA.TestQuestion3(Answer3);
+  writeln('StudentA"s test : ');
+  StudentA.TestQuestion1;
+  StudentA.TestQuestion2;
 
-  writeln('StudentB的試卷');
-  studentB.TestQuestion1;
-  studentB.TestQuestion2;
-  studentB.TestQuestion3;
+  writeln;
+
+  writeln('StudentB"s test : ');
+  StudentB.TestQuestion1;
+  StudentB.TestQuestion2;
 
   readln;
-
   // Insert user code here
 end.
