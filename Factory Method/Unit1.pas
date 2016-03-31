@@ -3,35 +3,35 @@ unit Unit1;
 interface
 
 uses
-SysUtils;
+  SysUtils;
 
 type
-TNightingale = class
-public
-  procedure sweep;
-  procedure Wash;
-  procedure Buyrich;
-end;
+  TNightingale = class
+  public
+    procedure sweep;
+    procedure Wash;
+    procedure Buyrich;
+  end;
 
-TUndergraduate = class(TNightingale)
-end;
+  TUndergraduate = class(TNightingale)
+  end;
 
-TVolunteer = class(TNightingale)
-end;
+  TVolunteer = class(TNightingale)
+  end;
 
-IFactory = Interface
- function createNightingale(): TNightingale;
-end;
+  IFactory = interface
+    function createNightingale(): TNightingale;
+  end;
 
-TUndergraduateFactory = class(TInterfacedObject, IFactory)
-public
-  function createNightingale(): TNightingale;
-end;
+  TUndergraduateFactory = class(TInterfacedObject, IFactory)
+  public
+    function createNightingale(): TNightingale;
+  end;
 
-TVolunteerFactory = class(TInterfacedObject, IFactory)
-public
-  function createNightingale(): TNightingale;
-end;
+  TVolunteerFactory = class(TInterfacedObject, IFactory)
+  public
+    function createNightingale(): TNightingale;
+  end;
 
 
 implementation
@@ -70,4 +70,5 @@ begin
 end;
 
 end.
+
  

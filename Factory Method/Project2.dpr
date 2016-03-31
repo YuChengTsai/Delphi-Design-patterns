@@ -6,7 +6,6 @@ uses
 
 var
 factory : IFactory;
-hugong : TNightingale;
 studentA : TNightingale;
 begin
   factory := TUndergraduateFactory.create;
