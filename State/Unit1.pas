@@ -8,7 +8,7 @@ uses
 type
   TWork = class;
 
-  TState = class
+  TState = class abstract(TObject)
   public
     procedure WriteProgram(w: TWork); virtual; abstract;
   end;
