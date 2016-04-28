@@ -10,18 +10,22 @@ var
 begin
   a := TConcreteAggregate.Create;
 
-  a[0] := '大鳥';
-  a[1] := '小菜';
-  a[2] := '行李';
-  a[3] := '老外';
-  a[4] := '巴士內部員工';
-  a[5] := '小偷';
+  a.self[0] := '大鳥';
+  a.self[1] := '小菜';
+  a.self[2] := '行李';
+  a.self[3] := '老外';
+  a.self[4] := '巴士內部員工';
+  a.self[5] := '小偷';
 
   i := TConcreteIterator.Create(a);
-    while (i.IsDone) do
-    begin
-    writeln(format('%s 請買車票!', [i.CurremtItem]));
-    end;
+  //i := TConcreteIteratorDesc.Create(a);
+  while not (i.IsDone) do
+  begin
+    writeln(format('%s 請買車票!', [i.CurrentItem]));
+    i.Next;
+  end;
+
+  a.Free;
 
   readln;
   // Insert user code here
