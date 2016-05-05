@@ -1,3 +1,1 @@
-# Design-patterns
-
-Hello, This Design Patterns use Delphi.
+# Design patterns implemented in Delphi5
